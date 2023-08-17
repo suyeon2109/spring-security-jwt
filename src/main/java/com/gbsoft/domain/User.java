@@ -1,5 +1,7 @@
 package com.gbsoft.domain;
 
+import static jakarta.persistence.GenerationType.*;
+
 import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
@@ -31,7 +33,7 @@ public class User {
 	@JsonIgnore
 	@Id
 	@Column(name = "user_id")
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@GeneratedValue(strategy = IDENTITY)
 	private Long userId;
 
 	@Column(unique = true)
